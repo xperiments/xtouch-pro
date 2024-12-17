@@ -35,7 +35,7 @@ jobs:
 
       # Step 5: Upload GitHub Pages artifact (UPDATED)
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v2
         with:
           path: build # Directory where Docusaurus generates the build output
 
