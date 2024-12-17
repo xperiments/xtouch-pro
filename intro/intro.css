@@ -1076,14 +1076,14 @@ main {
 
 .ctaButton{
   display: inline-block;
-  background: #0E421B;
-  color: #23A543;
+  background: #613400;
+  color: #FF8800;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
   transition: 0.4s;
-  outline: 7px solid #23A543;
+  outline: 7px solid #FF8800;
 }
 
 .kofi{
