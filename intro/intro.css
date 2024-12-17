@@ -200,6 +200,7 @@ main {
   .container .Phone {
     width: 70vw;
     height: 41vw;
+    left: 50%;
   }
   .container .viewcontrols {
     display:flex;
