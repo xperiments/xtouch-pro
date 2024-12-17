@@ -1096,8 +1096,11 @@ main {
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
-  transition: 0.4s;
+  
   outline: 7px solid #FF8800;
+  opacity: 0;
+  -webkit-animation: fadein 2s ease forwards;
+  animation: fadein 2s ease forwards;
 }
 
 
