@@ -172,7 +172,7 @@ main {
 }
 @media screen and (min-width: 540px) {
   .container .viewcontrols {
-    width: 175px;
+    width: 200px;
     height: 350px;
     left: 2%;
     top: 50%;
@@ -185,7 +185,7 @@ main {
 .container .Phone {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 55%;
   transition: 0.4s;
   transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0px);
 }
