@@ -130,11 +130,11 @@ export default function Home(): JSX.Element {
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>Chamber
-                    Temperature (extra hardware)
+                    Temperature (additional hardware)
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>RFID/NFC:{" "}
-                    (extra hardware)
+                    (additional hardware)
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>Support:{" "}
