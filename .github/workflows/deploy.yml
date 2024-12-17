@@ -1,16 +1,21 @@
-name: Deploy Docusaurus
+name: Deploy Docusaurus to GitHub Pages
 
 on:
   push:
     branches:
-      - main # Trigger on pushes to the main branch
+      - main # Trigger deployment on push to the main branch
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout your repository
+      # Step 1: Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -20,7 +25,7 @@ jobs:
         with:
           node-version: 18
 
-      # Step 3: Install project dependencies
+      # Step 3: Install dependencies
       - name: Install Dependencies
         run: npm install
 
@@ -28,21 +33,22 @@ jobs:
       - name: Build Docusaurus
         run: npm run build
 
-      # Step 5: Deploy to GitHub Pages
-      - name: Deploy Docusaurus to GitHub Pages
-        env:
-          GIT_USER: "xperiments" # Your GitHub username
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub Actions token
-        run: |
-          # Configure Git user
-          git config --global user.email "xperiments@gmail.com"
-          git config --global user.name "xperiments"
+      # Step 5: Upload the static site artifact
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: build # Directory where Docusaurus generates the build output
 
-          # Set the Git remote to include GITHUB_TOKEN
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+  # Step 6: Deploy to GitHub Pages
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
 
-          # Verify Git configuration
-          git config --list
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-          # Deploy using Docusaurus
-          npx docusaurus deploy --skip-build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
