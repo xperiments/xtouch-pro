@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxtouch_docs=self.webpackChunkxtouch_docs||[]).push([[1903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/xtouch-pro/blog","blogTitle":"Blog","authorsListPath":"/xtouch-pro/blog/authors"}')}}]);

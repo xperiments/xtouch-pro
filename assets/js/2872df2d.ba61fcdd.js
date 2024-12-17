@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkxtouch_docs=self.webpackChunkxtouch_docs||[]).push([[5522],{254:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/xtouch-pro/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
