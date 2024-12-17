@@ -135,6 +135,7 @@ main {
   transition: 0.4s;
   display: flex;
   border-radius: 16px;
+  background-color: #000;
 }
 .container .viewcontrols > label {
   display: flex;
@@ -149,7 +150,7 @@ main {
   background-color: #613400;
   padding: 20px 0;
   cursor: pointer;
-  width: 100%;
+  width: 80%;
   outline:7px solid #FF8800;
 }
 .container .viewcontrols > label:hover {
