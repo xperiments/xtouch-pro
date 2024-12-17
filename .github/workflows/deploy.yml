@@ -1,0 +1,36 @@
+name: Deploy Docusaurus
+
+on:
+  push:
+    branches:
+      - main # Trigger on pushes to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+
+    steps:
+      # Step 1: Checkout your repository
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18 # Use Node.js 18
+
+      # Step 3: Install project dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # Step 4: Build the Docusaurus site
+      - name: Build Docusaurus
+        run: npm run build
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy Docusaurus to GitHub Pages
+        env:
+          GIT_USER: ${{ secrets.GIT_USER }} # Use GitHub Secret for GIT_USER
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Built-in GitHub Token
+        run: npm run deploy

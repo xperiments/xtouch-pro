@@ -1,0 +1,39 @@
+---
+sidebar_position: 1
+---
+
+# Introduction
+
+**Xtouch** is a system for remotely controlling and managing 3D printers. It provides an easy-to-use interface to handle multiple printers and advanced features for an improved 3D printing experience.
+
+---
+
+## Key Features
+
+- **Supports Multiple Printer Types**:
+
+  - **Bambu Lab Cloud Printers** (with AMS control).
+  - **Bambu Lab Local Printers** (connected directly to your local network).
+  - **Klipper Printers**.
+  - **Planned Prusa Support** (coming in the future).
+
+- **Manage Multiple Printers**:
+
+  - Up to 10 Bambu Lab Cloud printers.
+  - Up to 10 Klipper printers.
+  - Up to 10 local printers.
+
+- **Advanced Print Controls**:
+
+  - Skip objects during a print job (for BBL and Klipper printers).
+  - Custom material settings for Bambu Lab printers, configured via BambuStudio or OrcaSlicer.
+  - Store custom presets directly on the device for quick access.
+  - Preview images while printing to monitor progress in real-time.
+
+## Planned Features
+
+- **File Browser**: Print files directly from the Xtouch screen SD card.
+- **RFID/NFC Spool Identification**: Identify spools using RFID or NFC technology (requires additional hardware, details TBA).
+- **Wireless Chamber Temperature Sensor**: Monitor the chamber temperature wirelessly (requires additional hardware, details TBA).
+
+---
