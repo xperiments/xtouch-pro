@@ -1234,3 +1234,23 @@ esp-web-install-button > button:hover {
   color: #613400;
   outline-color: #613400;
 }
+
+
+.smallLogo{
+  display:block;
+}
+
+.bigLogo{
+  display:none;
+  align-items: end;      
+}
+
+@media screen and (min-width: 880px) {
+  .smallLogo{
+    display:none;
+  }
+  .bigLogo{
+    display:flex;
+  }
+  
+}
