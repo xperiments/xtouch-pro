@@ -63,9 +63,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    defaultMode: "dark",
-    disableSwitch: true,
-    style: "dark",
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
+
     // Replace with your project's social card
     image: "img/xtouch-social-card.png",
     navbar: {
