@@ -32,7 +32,7 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
+  trailingSlash: false, // Optional: Remove trailing slashes
   presets: [
     [
       "classic",
@@ -123,7 +123,6 @@ const config: Config = {
     customFields: {
       privateKey: process.env.PRIVATE_KEY, // Access the key from the environment
     },
-    trailingSlash: false, // Optional: Remove trailing slashes
   } satisfies Preset.ThemeConfig,
 };
 
