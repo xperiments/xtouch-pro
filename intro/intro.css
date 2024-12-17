@@ -143,14 +143,14 @@ main {
   
   height: 40px;
   border-radius: 6px;
-  color: #23A543;
+  color: #FF8800;
   transition: 0.4s;
   border: rgba(0, 0, 0, 0) 1px solid;
-  background-color: #0E421B;
+  background-color: #613400;
   padding: 20px 0;
   cursor: pointer;
   width: 100%;
-  outline:7px solid #23A543;
+  outline:7px solid #FF8800;
 }
 .container .viewcontrols > label:hover {
   border: #000 1px solid;
