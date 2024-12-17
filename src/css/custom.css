@@ -48,13 +48,14 @@ strong{
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 50px;
   align-items: stretch;
   width: 100%;
   margin: auto;
   margin-bottom: 100px;
   margin-top: 100px;
+  padding: 32px;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -76,12 +77,6 @@ strong{
   }
 }
 
-@media (min-width: 1200px)
-{
-  .grid {
-    width: 1140px;
-  }
-}
 
 .mycard {
   text-align: center;
