@@ -63,6 +63,8 @@ const config: Config = {
   ],
 
   themeConfig: {
+    defaultMode: "dark",
+    disableSwitch: true,
     style: "dark",
     // Replace with your project's social card
     image: "img/xtouch-social-card.png",
