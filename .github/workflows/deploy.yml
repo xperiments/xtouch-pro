@@ -37,8 +37,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
 
-          # Explicitly set the git remote with the GITHUB_TOKEN
+          # Set Git remote with authentication
           git remote set-url origin https://${{ secrets.GIT_USER }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
-          # Deploy the Docusaurus site
+          # Deploy to GitHub Pages
           npx docusaurus deploy
