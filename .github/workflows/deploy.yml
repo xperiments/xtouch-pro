@@ -31,14 +31,18 @@ jobs:
       # Step 5: Deploy to GitHub Pages
       - name: Deploy Docusaurus to GitHub Pages
         env:
-          GIT_USER: "xperiments" # Set your GitHub username
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Built-in GitHub token
+          GIT_USER: "xperiments" # Your GitHub username
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub Actions token
         run: |
-          git config --global user.email "xperiments@gmail.com" # Your email
-          git config --global user.name "xperiments"           # Your GitHub username
+          # Configure Git user
+          git config --global user.email "xperiments@gmail.com"
+          git config --global user.name "xperiments"
 
-          # Explicitly set the Git remote with token authentication
+          # Set the Git remote to include GITHUB_TOKEN
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
-          # Deploy the site
-          npx docusaurus deploy
+          # Verify Git configuration
+          git config --list
+
+          # Deploy using Docusaurus
+          npx docusaurus deploy --skip-build
