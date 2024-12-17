@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+    runs-on: ubuntu-latest
 
     steps:
       # Step 1: Checkout your repository
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18 # Use Node.js 18
+          node-version: 18
 
       # Step 3: Install project dependencies
       - name: Install Dependencies
@@ -31,14 +31,13 @@ jobs:
       # Step 5: Deploy to GitHub Pages
       - name: Deploy Docusaurus to GitHub Pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Built-in GitHub token
-          GIT_USER: ${{ secrets.GIT_USER }} # GitHub username
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
 
-          # Set Git remote with authentication
-          git remote set-url origin https://${{ secrets.GIT_USER }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          # Explicitly set the Git remote to use GITHUB_TOKEN
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
 
-          # Deploy to GitHub Pages
+          # Deploy using Docusaurus
           npx docusaurus deploy
