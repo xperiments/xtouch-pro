@@ -896,16 +896,7 @@ main {
   top: 0;
   background-color: #000;
 }
-@media screen and (max-width: 768px) {
-  .screen .monitor .lockscreen {
-    background-image: url(asset/snapshot_1733183714767.png);
-  }
-}
-@media screen and (min-width: 768px) {
-  .screen .monitor .lockscreen {
-    background-image: url(asset/snapshot_1733183714767.png);
-  }
-}
+
 .screen .monitor .lockscreen {
   position: absolute;
   left: 0;
