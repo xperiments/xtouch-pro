@@ -200,10 +200,15 @@ main {
   .container .Phone {
     width: 70vw;
     height: 41vw;
-    left: 50%;
+    left: 55%;
   }
   .container .viewcontrols {
     display:flex;
+  }
+}
+@media screen and (min-width: 920px) {
+  .container .Phone {
+    left: 50%;
   }
 }
 .container .Phone .phoneSide {
