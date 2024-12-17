@@ -185,16 +185,18 @@ main {
 .container .Phone {
   position: absolute;
   top: 50%;
-  left: 55%;
+  left: 50%;
   transition: 0.4s;
-  transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0px);
+  
 }
 
 @media screen and (max-width: 768px) {
   .container .Phone {
     width: 300px;
     height: 300px;
+    transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0px);
   }
+  .overScreen{ display: none !important;}
 }
 @media screen and (min-width: 768px) {
   .container .Phone {
@@ -205,6 +207,7 @@ main {
   .container .viewcontrols {
     display:flex;
   }
+  .overScreen{ display: block;}
 }
 @media screen and (min-width: 920px) {
   .container .Phone {
@@ -888,6 +891,7 @@ main {
   height: 100%;
   left: 0;
   top: 0;
+  background-color: #000;
 }
 @media screen and (max-width: 768px) {
   .screen .monitor .lockscreen {
