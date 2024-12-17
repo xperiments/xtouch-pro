@@ -9,6 +9,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      type="module"
+      src="https://unpkg.com/esp-web-tools@9.4.0/dist/web/install-button.js?module"
+    ></script>
   </head>
   <body>
     <input type="radio" name="h" id="Intro_Animation" checked />
@@ -33,12 +37,7 @@
           <label index="4" for="frontView">Temp & Fan</label>
         </div>
         <div class="cta">
-          <a
-            class="ctaButton"
-            href="/xtouch-pro/docs/introduction"
-            target="_top"
-            >Get Started</a
-          >
+          <div class="ctaButton" target="_top">Install Now</div>
         </div>
         <a href="https://ko-fi.com/I3I8PSAYU" rel="nofollow" class="kofi"
           ><img
@@ -207,6 +206,24 @@
                     src="/xtouch-pro/intro/img/temperature.png"
                   />
                 </div>
+                <div class="installScreen">
+                  <esp-web-install-button
+                    id="installButton"
+                    class="esp-web-install-button"
+                    manifest="https://xperiments.in/xtouch-pro-bin/webusb/xtouch-pro-manifest.json"
+                  >
+                    <button slot="activate">Begin Installation</button>
+                    <span slot="unsupported"
+                      >Ah snap, your browser doesn't work!</span
+                    >
+                    <span slot="not-allowed"
+                      >Ah snap, you are not allowed to use this on HTTP!</span
+                    >
+                  </esp-web-install-button>
+                  <button class="postInstallButton">
+                    Installed! → Install Chrome Extension
+                  </button>
+                </div>
               </div>
             </div>
             <!-- <div class="screen overscreen"></div> -->
@@ -242,8 +259,70 @@
               image.style.display = "none";
             });
             images[index].style.display = "block";
+            document.querySelector(".installScreen").style.display = "none";
           });
         });
+      document.querySelector(".ctaButton").addEventListener("click", (e) => {
+        document.querySelector('label[for="frontView"').click();
+        document.querySelector(".installScreen").style.display = "flex";
+        document.querySelector(".viewcontrols").style.display = "none";
+
+        document.querySelector(".postInstallButton").style.display = "none";
+        document.querySelector(".esp-web-install-button").style.display =
+          "block";
+      });
+
+      document
+        .querySelector(".postInstallButton")
+        .addEventListener("click", (e) => {
+          window.top.location.href =
+            "/xtouch-pro/docs/Installation/chrome-extension";
+        });
+
+      let interval;
+      function handleElementInsertion(mutationsList, observer) {
+        for (const mutation of mutationsList) {
+          if (mutation.type === "childList") {
+            for (const node of mutation.addedNodes) {
+              if (node.nodeType === Node.ELEMENT_NODE) {
+                if (node.tagName === "EWT-INSTALL-DIALOG") {
+                  node.addEventListener("closed", (e) => {
+                    console.log("Install window was closed");
+                  });
+                  interval = setInterval(() => {
+                    if (
+                      node.___installState &&
+                      node.___installState.state === "finished"
+                    ) {
+                      document.querySelector(
+                        "ewt-install-dialog"
+                      ).style.display = "none";
+                      document.querySelector(".viewcontrols").style.display =
+                        "flex";
+                      document.querySelector(
+                        ".postInstallButton"
+                      ).style.display = "block";
+                      document.querySelector(
+                        ".esp-web-install-button"
+                      ).style.display = "none";
+
+                      document
+                        .querySelectorAll("[inert]")
+                        .forEach((element) => {
+                          element.removeAttribute("inert");
+                        });
+                    }
+                  }, 500);
+                }
+              }
+            }
+          }
+        }
+      }
+      new MutationObserver(handleElementInsertion).observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
     </script>
   </body>
 </html>

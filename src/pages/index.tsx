@@ -11,7 +11,7 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
 
-        <iframe className="iframe" src="intro/index.html" width="100%" height="100%"></iframe>
+        <iframe className="iframe" src="/xtouch-pro/intro/index.html" width="100%" height="100%"></iframe>
 
   );
 }
