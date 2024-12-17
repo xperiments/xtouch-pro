@@ -32,8 +32,9 @@ jobs:
       - name: Deploy Docusaurus to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Built-in GitHub token
-          GIT_USER: ${{ secrets.GIT_USER }} # Explicitly set GIT_USER
+          GIT_USER: ${{ secrets.GIT_USER }} # GitHub Secret for GIT_USER
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          npx docusaurus deploy --git-user $GIT_USER
+          echo "Using GIT_USER: $GIT_USER"
+          npx docusaurus deploy
