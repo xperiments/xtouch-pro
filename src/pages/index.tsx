@@ -58,7 +58,7 @@ export default function Home(): JSX.Element {
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i> Preview
-                    Images: <strong>Available</strong>
+                    Images
                   </li>
                   <li>
                     <strong title="">---</strong>
