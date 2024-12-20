@@ -33,6 +33,16 @@ const config: Config = {
     locales: ["en"],
   },
   trailingSlash: false, // Optional: Remove trailing slashes
+  scripts: [
+    {
+      src: "js/cookie.js",
+      async: false,
+    },
+    {
+      src: "js/cookie-consent.js",
+      async: false,
+    },
+  ],
   presets: [
     [
       "classic",

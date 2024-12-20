@@ -1243,6 +1243,7 @@ esp-web-install-button > button:hover {
 .bigLogo{
   display:none;
   align-items: end;      
+  pointer-events: none;
 }
 
 @media screen and (min-width: 880px) {
