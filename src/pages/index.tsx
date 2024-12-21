@@ -98,6 +98,7 @@ export default function Home(): JSX.Element {
             <div className="mycard basic">
               <div className="title">
                 <h2>FREE</h2>
+                <h5>Forever</h5>
               </div>
               <div className="price">
                 <h4>
@@ -149,7 +150,8 @@ export default function Home(): JSX.Element {
             </div>
             <div className="mycard standard">
               <div className="title">
-                <h2>PRO</h2>
+                <h2>PRO / BETA</h2>
+                <h5>* Beta ends 15/01/2025</h5>
               </div>
               <div className="price">
                 <h4>
