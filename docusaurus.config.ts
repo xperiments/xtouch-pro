@@ -93,7 +93,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "installSidebar",
           position: "left",
-          label: "Installation",
+          label: "Documentation",
         },
         {
           href: "/xtouch-pro/docs/hardware/required",

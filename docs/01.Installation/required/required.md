@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Required Tools and Preparation
+# Required Tools
 
 Before beginning, ensure you have the following:
 
@@ -28,15 +28,15 @@ Before beginning, ensure you have the following:
 
 5. **Chrome Browser Extension**
 
-   - **Download the extension** from this link:  
-     **[Download Chrome Extension](https://github.com/xperiments/xtouch-bin/raw/refs/heads/main/extensions/xtouch28.zip)**
    - This extension is required for generating the initial configuration file and managing the xtouch screen remotely.
    - Save the downloaded file in a secure location, such as a dedicated "xtouch" folder in your Documents or on a backup drive.
 
-6. **xtouch Online Installer**
+     :::info[Download Extension]
+     **[Download Chrome Extension](required/chrome-extension)**
+     :::
 
-   - Access the installer page via this URL:  
-     **[https://xperiments.in/xtouch-bin](https://xperiments.in/xtouch-bin)**
+6. **Stable Power Supply**
 
-7. **Stable Power Supply**
-   - Ensure your xtouch screen is connected to a reliable power source during the setup process.
+   :::danger[]
+   Ensure your xtouch screen is connected to a reliable power source during the setup process.
+   :::

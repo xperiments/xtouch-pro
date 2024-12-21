@@ -2,7 +2,7 @@
 sidebar_position: 1000
 ---
 
-# Troubleshooting Guide for Xtouch
+# Troubleshooting
 
 ## SD Card Issues
 

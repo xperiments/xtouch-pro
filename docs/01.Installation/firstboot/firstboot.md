@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
-# First Boot
+# Setup
 
 ### Firmware Installation Completion Steps
 
