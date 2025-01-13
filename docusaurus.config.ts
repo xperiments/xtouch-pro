@@ -35,13 +35,16 @@ const config: Config = {
   trailingSlash: false, // Optional: Remove trailing slashes
   scripts: [
     {
-      src: "js/cookie.js",
+      src: "/xtouch-pro/js/cookie.js",
       async: false,
     },
     {
-      src: "js/cookie-consent.js",
+      src: "/xtouch-pro/js/cookie-consent.js",
       async: false,
     },
+  ],
+  stylesheets: [
+    "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css",
   ],
   presets: [
     [

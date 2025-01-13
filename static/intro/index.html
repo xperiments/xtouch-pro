@@ -347,6 +347,17 @@
         childList: true,
         subtree: true,
       });
+
+      const devMode = localStorage.getItem("ᗢ") === "true";
+
+      if (devMode) {
+        document
+          .querySelector("esp-web-install-button")
+          .setAttribute(
+            "manifest",
+            "https://github.com/xperiments/xtouch-pro-bin-dev/raw/refs/heads/main/webusb/xtouch-pro-dev-manifest.json"
+          );
+      }
     </script>
   </body>
 </html>
