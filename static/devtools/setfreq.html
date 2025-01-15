@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Frequency</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #555;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #provision-error {
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        display: none;
+      }
+
+      .success-message {
+        color: green;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        display: none;
+      }
+    </style>
+    <script>
+      function validateIP(ip) {
+        const ipPattern =
+          /^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)$/;
+        return ipPattern.test(ip);
+      }
+
+      async function provisionDevice() {
+        const ip = document.getElementById("ip-address").value.trim();
+        if (!validateIP(ip)) {
+          alert("Please enter a valid IP address.");
+          return;
+        }
+
+        const frequencyValue = parseInt(
+          document.getElementById("frequency").value
+        );
+        if (!frequencyValue) {
+          alert("Please select a frequency.");
+          return;
+        }
+
+        const serverUrl = "http://" + ip + "/device/setFrequency";
+
+        try {
+          const response = await fetch(serverUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ frequency: frequencyValue }),
+          });
+
+          if (!response.ok) {
+            document.getElementById("provision-error").style.display = "block";
+            document.getElementById("success-message").style.display = "none";
+          } else {
+            document.getElementById("provision-error").style.display = "none";
+            document.getElementById("success-message").style.display = "block";
+          }
+        } catch (error) {
+          document.getElementById("provision-error").style.display = "block";
+          document.getElementById("success-message").style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Select Frequency</h1>
+      <form onsubmit="event.preventDefault(); provisionDevice();">
+        <label for="ip-address">Enter device IP address:</label>
+        <input
+          type="text"
+          id="ip-address"
+          name="ip-address"
+          placeholder="e.g., 192.168.1.100"
+        />
+
+        <label for="frequency">Choose a frequency:</label>
+        <select id="frequency" name="frequency">
+          <option value="">-- Select Frequency --</option>
+          <option value="12500000">12.5 MHz</option>
+          <option value="13000000">13 MHz</option>
+          <option value="13500000">13.5 MHz</option>
+          <option value="14000000">14 MHz</option>
+          <option value="14500000">14.5 MHz</option>
+          <option value="15000000">15 MHz</option>
+          <option value="15500000">15.5 MHz</option>
+          <option value="16000000">16 MHz</option>
+          <option value="16500000">16.5 MHz</option>
+          <option value="17000000">17 MHz</option>
+          <option value="17500000">17.5 MHz</option>
+          <option value="18000000">18 MHz</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="provision-error">
+        Error provisioning the device. Please try again.
+      </p>
+      <p id="success-message" class="success-message">
+        Frequency provisioned successfully!
+      </p>
+    </div>
+  </body>
+</html>
