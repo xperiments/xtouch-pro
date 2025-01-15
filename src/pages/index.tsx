@@ -89,7 +89,7 @@ export default function Home(): JSX.Element {
             <div className="mycard standard">
               <div className="title">
                 <h2>PRO / BETA</h2>
-                <h5>* Beta ends 15/01/2025</h5>
+                <h5>* Beta ends 28/01/2025</h5>
               </div>
               <div className="price">
                 <h4>
