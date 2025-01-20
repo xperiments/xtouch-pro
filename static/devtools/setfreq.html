@@ -78,19 +78,7 @@
       }
     </style>
     <script>
-      function validateIP(ip) {
-        const ipPattern =
-          /^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)$/;
-        return ipPattern.test(ip);
-      }
-
       async function provisionDevice() {
-        const ip = document.getElementById("ip-address").value.trim();
-        if (!validateIP(ip)) {
-          alert("Please enter a valid IP address.");
-          return;
-        }
-
         const frequencyValue = parseInt(
           document.getElementById("frequency").value
         );
@@ -99,7 +87,7 @@
           return;
         }
 
-        const serverUrl = "http://" + ip + "/device/setFrequency";
+        const serverUrl = "/device/setFrequency";
 
         try {
           const response = await fetch(serverUrl, {
@@ -128,14 +116,6 @@
     <div class="container">
       <h1>Select Frequency</h1>
       <form onsubmit="event.preventDefault(); provisionDevice();">
-        <label for="ip-address">Enter device IP address:</label>
-        <input
-          type="text"
-          id="ip-address"
-          name="ip-address"
-          placeholder="e.g., 192.168.1.100"
-        />
-
         <label for="frequency">Choose a frequency:</label>
         <select id="frequency" name="frequency">
           <option value="">-- Select Frequency --</option>
