@@ -99,6 +99,11 @@ const config: Config = {
           label: "Documentation",
         },
         {
+          href: "/xtouch-pro/docs/hardware/3d-models",
+          label: "3d Models",
+          position: "left",
+        },
+        {
           href: "/xtouch-pro/docs/hardware/required",
           label: "Where to buy",
           position: "left",
