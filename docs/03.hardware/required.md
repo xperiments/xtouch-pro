@@ -34,3 +34,8 @@ sidebar_position: 1
 <a href="https://s.click.aliexpress.com/e/_olroLeH">
 <img src="https://ae-pic-a1.aliexpress-media.com/kf/S4de8e3590f474182a7f0304bc9c89f23T.jpg_960x960q75.jpg_.avif" style={{width: 200}} />
 </a>
+
+Alternate Pogo Pin Link:
+<a href="https://s.click.aliexpress.com/e/_oEl5got">
+<img src="https://ae-pic-a1.aliexpress-media.com/kf/S4de8e3590f474182a7f0304bc9c89f23T.jpg*960x960q75.jpg*.avif" style={{width: 200}} />
+</a>
