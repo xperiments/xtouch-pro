@@ -1,77 +1,90 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg?: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg?: React.ComponentType<React.ComponentProps<"svg">>;
   Img?: string;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Multi-Printer Support',
-    Img: require('@site/static/img/xtouch-manage-1.png').default as string,
+    title: "Multi-Printer Support",
+    Img: require("@site/static/img/xtouch-manage-1.png").default as string,
     description: (
       <>
-        Control up to <strong>10 BambuLab Cloud</strong>, <strong>10 BambuLab Local</strong>, and <strong>10 Klipper printers</strong> at once, with future support planned for systems like <strong>Prusa</strong>.
+        Control up to <strong>10 BambuLab Cloud</strong>,{" "}
+        <strong>10 BambuLab Local</strong>, and{" "}
+        <strong>10 Klipper printers</strong> at once, currently adding{" "}
+        <strong>PRUSA</strong> support.
       </>
     ),
   },
   {
-    title: 'Cloud & Local Printer Management',
-    Img: require('@site/static/img/xtouch-manage-0.png').default as string,
+    title: "Cloud & Local Printer Management",
+    Img: require("@site/static/img/xtouch-manage-0.png").default as string,
     description: (
       <>
-        Effortlessly manage your BambuLab Cloud printers while maintaining control of your local 3D printers.
+        Effortlessly manage your BambuLab Cloud printers while maintaining
+        control of your local 3D printers.
       </>
     ),
   },
   {
-    title: 'Advanced Material Management',
-    Img: require('@site/static/img/xtouch-ams.png').default as string,
+    title: "Advanced Material Management",
+    Img: require("@site/static/img/xtouch-ams.png").default as string,
     description: (
       <>
-       Fully supports the BambuLab <strong>AMS</strong> (Automatic Material System), ensuring smooth material management and hassle-free operation.
+        Fully supports the BambuLab <strong>AMS</strong> (Automatic Material
+        System), ensuring smooth material management and hassle-free operation.
       </>
     ),
   },
   {
-    title: 'Custom Material Support',
-    Img: require('@site/static/img/xtouch-custom-material.png').default as string,
+    title: "Custom Material Support",
+    Img: require("@site/static/img/xtouch-custom-material.png")
+      .default as string,
     description: (
       <>
-       Configure and <strong>manage custom materials</strong> for BBL printers using tools like <strong>BambuStudio</strong> and <strong>OrcaSlicer</strong>, empowering you with complete material flexibility.
+        Configure and <strong>manage custom materials</strong> for BBL printers
+        using tools like <strong>BambuStudio</strong> and{" "}
+        <strong>OrcaSlicer</strong>, empowering you with complete material
+        flexibility.
       </>
     ),
   },
   {
-    title: 'Temp / Fan Profiles',
-    Img: require('@site/static/img/xtouch-keypad.png').default as string,
+    title: "Temp / Fan Profiles",
+    Img: require("@site/static/img/xtouch-keypad.png").default as string,
     description: (
       <>
-       <strong>Define and store</strong> custom temperature and fan <strong>profiles</strong> directly on the screen for quick access and consistent results across print jobs.
+        <strong>Define and store</strong> custom temperature and fan{" "}
+        <strong>profiles</strong> directly on the screen for quick access and
+        consistent results across print jobs.
       </>
     ),
   },
   {
-    title: 'Skip Objects with Precision',
-    Img: require('@site/static/img/xtouch-skip.png').default as string,
+    title: "Skip Objects with Precision",
+    Img: require("@site/static/img/xtouch-skip.png").default as string,
     description: (
       <>
-       The <strong>Skip Objects</strong> feature lets you stop printing failed objects while completing the rest, saving time and filament. Supported on <strong>BambuLab and Klipper printers</strong>.
+        The <strong>Skip Objects</strong> feature lets you stop printing failed
+        objects while completing the rest, saving time and filament. Supported
+        on <strong>BambuLab and Klipper printers</strong>.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, Img, description}: FeatureItem) {
+function Feature({ title, Svg, Img, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         {Svg && <Svg className={styles.featureSvg} role="img" />}
-        {Img && <img src={Img} alt={title} className="feature-img"/>}
+        {Img && <img src={Img} alt={title} className="feature-img" />}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
