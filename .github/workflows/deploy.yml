@@ -33,12 +33,16 @@ jobs:
       - name: Build Docusaurus
         run: npm run build
 
-      # Step 5: Upload GitHub Pages artifact (UPDATED)
+      # Step 5: Verify Build Output
+      - name: Check if build folder exists
+        run: ls -la build
+
+      # Step 6: Upload GitHub Pages artifact (UPDATED)
       - name: Upload GitHub Pages artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: build # Directory where Docusaurus generates the build output
+          path: build # Ensure this matches the actual build output folder
 
   deploy:
     runs-on: ubuntu-latest
@@ -49,14 +53,18 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # Step 6: Download artifact (UPDATED)
+      # Step 7: Download artifact (UPDATED)
       - name: Download GitHub Pages artifact
         uses: actions/download-artifact@v4
         with:
           name: github-pages
           path: build
 
-      # Step 7: Deploy to GitHub Pages
+      # Step 8: Verify Downloaded Artifact
+      - name: Check if artifact was downloaded
+        run: ls -la build
+
+      # Step 9: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
