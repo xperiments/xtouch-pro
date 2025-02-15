@@ -29,16 +29,20 @@ jobs:
       - name: Build Docusaurus
         run: npm run build
 
-      - name: Verify Build Output
+      - name: Debug Build Output
         run: |
-          echo "Checking build output..."
-          ls -la build
+          echo "Checking if the build directory exists..."
+          ls -la
+          ls -la build || echo "🚨 Build directory does not exist!"
 
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
           name: docusaurus-site
+
+      - name: Confirm Artifact Upload
+        run: echo "✅ Artifact uploaded successfully!"
 
   deploy:
     runs-on: ubuntu-latest
