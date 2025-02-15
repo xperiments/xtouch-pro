@@ -39,7 +39,7 @@ jobs:
 
       # Step 6: Upload GitHub Pages Artifact (USE upload-pages-artifact@v2)
       - name: Upload GitHub Pages Artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: build # This is where Docusaurus generates the site
 
