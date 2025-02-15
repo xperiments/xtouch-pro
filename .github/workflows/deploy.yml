@@ -31,18 +31,15 @@ jobs:
 
       - name: Debug Build Output
         run: |
-          echo "Checking if the build directory exists..."
+          echo "Checking the workspace..."
           ls -la
-          ls -la build || echo "🚨 Build directory does not exist!"
+          echo "Checking the build directory..."
+          ls -la build || echo "🚨 ERROR: Build directory does not exist!"
 
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
-          name: docusaurus-site
-
-      - name: Confirm Artifact Upload
-        run: echo "✅ Artifact uploaded successfully!"
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,11 +47,8 @@ jobs:
 
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: docusaurus-site
