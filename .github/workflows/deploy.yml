@@ -3,7 +3,7 @@ name: Deploy Docusaurus to GitHub Pages
 on:
   push:
     branches:
-      - main # Trigger deployment on push to the main branch
+      - main
 
 permissions:
   contents: read
@@ -30,13 +30,15 @@ jobs:
         run: npm run build
 
       - name: Verify Build Output
-        run: ls -la build
+        run: |
+          echo "Checking build output..."
+          ls -la build
 
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
-          name: docusaurus-site # Ensure artifact has a name
+          name: docusaurus-site
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,4 +53,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          artifact_name: docusaurus-site # Match the artifact name
+          artifact_name: docusaurus-site
