@@ -15,33 +15,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      # Step 3: Install dependencies
       - name: Install Dependencies
         run: npm install
 
-      # Step 4: Build the Docusaurus site
       - name: Build Docusaurus
         run: npm run build
 
-      # Step 5: Debugging - Check Build Output
       - name: Verify Build Output
         run: ls -la build
 
-      # Step 6: Upload GitHub Pages Artifact (USE upload-pages-artifact@v2)
       - name: Upload GitHub Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build # This is where Docusaurus generates the site
+          path: build
+          name: docusaurus-site # Ensure artifact has a name
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,7 +47,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # Step 7: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          artifact_name: docusaurus-site # Match the artifact name
