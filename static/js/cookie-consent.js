@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
               acceptNecessaryBtn: "Reject all",
               showPreferencesBtn: "Manage preferences",
               footer:
-                '<a href="/docs/privacy">Privacy Policy</a>\n<a href="/docs/terms">Terms and conditions</a>',
+                '<a href="docs/privacy">Privacy Policy</a>\n<a href="docs/terms">Terms and conditions</a>',
             },
             preferencesModal: {
               title: "Consent Preferences Center",
