@@ -51,7 +51,7 @@ export default function Home(): JSX.Element {
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i> Supported
-                    Printers: BBL (Cloud/Local), Klipper
+                    Printers: BBL Local, Klipper
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i> AMS for
@@ -104,7 +104,7 @@ export default function Home(): JSX.Element {
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>Supported
-                    Printers: BBL (Cloud/Local), Klipper
+                    Printers: BBL Local, Klipper
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>AMS for

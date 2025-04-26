@@ -8,6 +8,6 @@ After completing the firmware installation, you can set up Xtouch to manage your
 
 ## Printer Types Supported
 
-- [BambuLab Cloud Printer](./bblcloud.md)
 - [BambuLab Local Printer](./bbllocal.md)
 - [Klipper Printer](./klipper.md)
+- [Prusa Printers] (Comming soon)

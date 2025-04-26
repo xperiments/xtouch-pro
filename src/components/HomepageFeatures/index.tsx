@@ -15,21 +15,17 @@ const FeatureList: FeatureItem[] = [
     Img: require("@site/static/img/xtouch-manage-1.png").default as string,
     description: (
       <>
-        Control up to <strong>10 BambuLab Cloud</strong>,{" "}
-        <strong>10 BambuLab Local</strong>, and{" "}
+        Control up to <strong>10 BambuLab Local</strong>, and{" "}
         <strong>10 Klipper printers</strong> at once, currently adding{" "}
         <strong>PRUSA</strong> support.
       </>
     ),
   },
   {
-    title: "Cloud & Local Printer Management",
+    title: "Printer Management",
     Img: require("@site/static/img/xtouch-manage-0.png").default as string,
     description: (
-      <>
-        Effortlessly manage your BambuLab Cloud printers while maintaining
-        control of your local 3D printers.
-      </>
+      <>Effortlessly manage your local 3D printers with ease and precision.</>
     ),
   },
   {
@@ -37,8 +33,8 @@ const FeatureList: FeatureItem[] = [
     Img: require("@site/static/img/xtouch-ams.png").default as string,
     description: (
       <>
-        Fully supports the BambuLab <strong>AMS</strong> (Automatic Material
-        System), ensuring smooth material management and hassle-free operation.
+        Supports BambuLab <strong>AMS</strong> for seamless material management.
+        <strong>Creality CFS MMU</strong> support is in development.
       </>
     ),
   },

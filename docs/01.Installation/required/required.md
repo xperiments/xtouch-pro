@@ -26,16 +26,7 @@ Before beginning, ensure you have the following:
    - [Download CH340 Drivers](https://www.wch.cn/download/CH341SER_ZIP.html)
    - [CH340 Drivers Installation Tutorial](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
 
-5. **Chrome Browser Extension**
-
-   - This extension is required for generating the initial configuration file and managing the xtouch screen remotely.
-   - Save the downloaded file in a secure location, such as a dedicated "xtouch" folder in your Documents or on a backup drive.
-
-     :::info[Download Extension]
-     **[Download Chrome Extension](required/chrome-extension)**
-     :::
-
-6. **Stable Power Supply**
+5. **Stable Power Supply**
 
    :::danger[]
    Ensure your xtouch screen is connected to a reliable power source during the setup process.
