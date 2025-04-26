@@ -39,12 +39,14 @@ export default function Home(): JSX.Element {
                 <h5>Forever</h5>
               </div>
               <div className="price">
-                <h4>
-                  <sup>$</sup>0
-                </h4>
+                <h4>0€</h4>
               </div>
               <div className="option">
                 <ul>
+                  <li>
+                    <i className="fa fa-check" aria-hidden="true"></i>
+                    xtouch-hub (local-cloud): <strong>No</strong>
+                  </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i> Control:{" "}
                     <strong title="">1 printer</strong>
@@ -58,28 +60,6 @@ export default function Home(): JSX.Element {
                     BBL: Standard Presets
                   </li>
                   <li>
-                    <i className="fa fa-check" aria-hidden="true"></i> Preview
-                    Images
-                  </li>
-                  <li>
-                    <strong title="">---</strong>
-                  </li>
-                  <li>
-                    <strong title="">---</strong>
-                  </li>
-                  <li>
-                    <strong title="">---</strong>
-                  </li>
-                  <li>
-                    <strong title="">---</strong>
-                  </li>
-                  <li>
-                    <strong title="">---</strong>
-                  </li>
-                  <li>
-                    <strong title="">---</strong>
-                  </li>
-                  <li>
                     <i className="fa fa-check" aria-hidden="true"></i> Support:
                     Community
                   </li>
@@ -88,47 +68,48 @@ export default function Home(): JSX.Element {
             </div>
             <div className="mycard standard">
               <div className="title">
-                <h2>PRO / BETA</h2>
-                <h5>* Beta ends 28/01/2025</h5>
+                <h2>PRO (ßETA)</h2>
+                <h5>* Free during ßeta</h5>
               </div>
               <div className="price">
                 <h4>
-                  <sup>$</sup>TBA
+                  19.99<sup>€</sup>
                 </h4>
               </div>
               <div className="option">
                 <ul>
                   <li>
+                    <i className="fa fa-check" aria-hidden="true"></i>
+                    xtouch-hub (local-cloud): <strong>Yes</strong>
+                  </li>
+                  <li>
                     <i className="fa fa-check" aria-hidden="true"></i>Control:{" "}
-                    <strong>Up to 30 printers</strong>
+                    <strong>Up to 20 printers</strong>
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>Supported
                     Printers: BBL Local, Klipper
                   </li>
                   <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>AMS for
-                    BBL: <strong>Custom Material Presets</strong>
+                    <i className="fa fa-check" aria-hidden="true"></i>OTA
+                    Updates
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>Preview
                     Images
                   </li>
-                  <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>File
-                    Browser
-                  </li>
+
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>Custom
                     Presets (Temp/Fan)
                   </li>
                   <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>Object
-                    Skipping
+                    <i className="fa fa-check" aria-hidden="true"></i>AMS for
+                    BBL: <strong>Custom Material Presets</strong>
                   </li>
                   <li>
-                    <i className="fa fa-check" aria-hidden="true"></i>OTA
-                    Updates
+                    <i className="fa fa-check" aria-hidden="true"></i>
+                    Skip Objects
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>Chamber
@@ -136,7 +117,7 @@ export default function Home(): JSX.Element {
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>RFID/NFC:{" "}
-                    (additional hardware)
+                    (xspool)
                   </li>
                   <li>
                     <i className="fa fa-check" aria-hidden="true"></i>Support:{" "}
@@ -144,6 +125,11 @@ export default function Home(): JSX.Element {
                   </li>
                 </ul>
               </div>
+              <small>
+                *Xtouch is a one-time purchase of €19.99 for lifetime use,
+                including free updates for 12 months. After that, the app keeps
+                working—but updates require renewal.
+              </small>
             </div>
           </div>
         </div>
