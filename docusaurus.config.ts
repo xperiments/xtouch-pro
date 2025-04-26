@@ -136,6 +136,22 @@ const config: Config = {
             },
           ],
         },
+        {
+          title: "Legal",
+          items: [
+            {
+              label: "Privacy Policy",
+              href: "/docs/privacy",
+            },
+            {
+              label: "Terms of Service",
+              href: "/docs/terms",
+            },
+            {
+              html: '<button type="button" data-cc="show-preferencesModal">Cookie Preferences</button>',
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Pedro Casaubon.`,
     },
