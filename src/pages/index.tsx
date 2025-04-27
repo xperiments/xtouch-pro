@@ -12,7 +12,7 @@ function HomepageHeader() {
   return (
     <iframe
       className="iframe"
-      src="/xtouch-pro/intro/index.html"
+      src="/intro/index.html"
       width="100%"
       height="100%"
     ></iframe>

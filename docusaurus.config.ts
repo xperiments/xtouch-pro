@@ -7,15 +7,15 @@ require("dotenv").config();
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "xtouch",
+  title: "xtouch-pro",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://xperiments.in/",
+  url: "https://xtouch.pro/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/xtouch-pro/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -35,11 +35,11 @@ const config: Config = {
   trailingSlash: false, // Optional: Remove trailing slashes
   scripts: [
     {
-      src: "/xtouch-pro/js/cookie.js",
+      src: "js/cookie.js",
       async: false,
     },
     {
-      src: "/xtouch-pro/js/cookie-consent.js",
+      src: "js/cookie-consent.js",
       async: false,
     },
   ],
@@ -99,12 +99,12 @@ const config: Config = {
           label: "Documentation",
         },
         {
-          href: "/xtouch-pro/docs/hardware/3d-models",
+          href: "docs/hardware/3d-models",
           label: "3d Models",
           position: "left",
         },
         {
-          href: "/xtouch-pro/docs/hardware/required",
+          href: "docs/hardware/required",
           label: "Where to buy",
           position: "left",
         },
