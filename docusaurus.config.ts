@@ -99,12 +99,12 @@ const config: Config = {
           label: "Documentation",
         },
         {
-          href: "docs/hardware/3d-models",
+          href: "/docs/hardware/3d-models",
           label: "3d Models",
           position: "left",
         },
         {
-          href: "docs/hardware/required",
+          href: "/docs/hardware/required",
           label: "Where to buy",
           position: "left",
         },
