@@ -35,6 +35,7 @@
           <label index="3" for="topView">Skip Objects</label>
           <label index="2" for="leftView">Filament Manager</label>
           <label index="4" for="frontView">Temp & Fan</label>
+          <label index="5" for="behindView" style="display: none"></label>
         </div>
         <div class="cta">
           <div class="ctaButton" target="_top">Install Now</div>
@@ -267,7 +268,9 @@
             images.forEach((image) => {
               image.style.display = "none";
             });
-            images[index].style.display = "block";
+            if (images[index]) {
+              images[index].style.display = "block";
+            }
             document.querySelector(".installScreen").style.display = "none";
           });
         });
@@ -343,6 +346,28 @@
             "https://xperiments.in/xtouch-pro-bin/webusb/xtouch-pro-dev-manifest.json"
           );
       }
+
+      const demoDivs = [
+        "bottomView",
+        "rightView",
+        "topView",
+        "leftView",
+        "frontView",
+        "behindView",
+      ];
+      let demoPos = 0;
+
+      const demoInterval = setInterval(() => {
+        document.querySelector(`label[for="${demoDivs[demoPos]}"]`).click();
+        demoPos++;
+        if (demoPos >= demoDivs.length) {
+          demoPos = 0;
+        }
+      }, 5000);
+
+      document.addEventListener("mousedown", (e) => {
+        clearInterval(demoInterval);
+      });
     </script>
   </body>
 </html>

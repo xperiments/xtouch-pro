@@ -1,13 +1,6 @@
 body {
-  
-
-
-    background: 
-    radial-gradient(circle at 50% 70%, #23A543, rgba(0,0,0,0.76)),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")
-    
-
-    
+  background: radial-gradient(circle at 50% 70%, #23a543, rgba(0, 0, 0, 0.76)),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 i {
   display: flex;
@@ -24,12 +17,16 @@ input {
   display: none;
 }
 
-.df, .container .Phone .PhoneFront .topBar .camera, .container .Phone .PhoneFront .topBar {
+.df,
+.container .Phone .PhoneFront .topBar .camera,
+.container .Phone .PhoneFront .topBar {
   display: flex;
   align-items: center;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -81,7 +78,7 @@ main {
   transform: translateZ(3px) translate(-50%, -50%);
   border: 1px solid rgba(0, 0, 0, 0);
   -webkit-animation: pulse linear infinite 1.5s 4s;
-          animation: pulse linear infinite 1.5s 4s;
+  animation: pulse linear infinite 1.5s 4s;
 }
 .startscreen label:hover {
   background: #000;
@@ -118,7 +115,7 @@ main {
 
 #Intro_Animation:checked ~ main .Phone {
   -webkit-animation: intro ease 2s;
-          animation: intro ease 2s;
+  animation: intro ease 2s;
 }
 
 .container {
@@ -141,23 +138,22 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   height: 40px;
   border-radius: 6px;
-  color: #FF8800;
+  color: #ff8800;
   transition: 0.4s;
   border: rgba(0, 0, 0, 0) 1px solid;
   background-color: #613400;
   padding: 20px 0;
   cursor: pointer;
   width: 80%;
-  outline:7px solid #FF8800;
+  outline: 7px solid #ff8800;
 }
 .container .viewcontrols > label:hover {
-
-    background: #FF8800;
-    outline-color: #613400;
-    color: #613400;
+  background: #ff8800;
+  outline-color: #613400;
+  color: #613400;
 }
 @media screen and (max-width: 540px) {
   .container .viewcontrols {
@@ -169,8 +165,7 @@ main {
     background: rgb(247, 247, 247);
     z-index: 3;
     justify-content: space-evenly;
-    display:none;
-    
+    display: none;
   }
 }
 @media screen and (min-width: 540px) {
@@ -182,7 +177,7 @@ main {
     transform: translate(0, -50%);
     flex-direction: column;
     justify-content: space-evenly;
-    display:none;
+    display: none;
   }
 }
 .container .Phone {
@@ -190,16 +185,18 @@ main {
   top: 50%;
   left: 50%;
   transition: 0.4s;
-  
 }
 
 @media screen and (max-width: 768px) {
   .container .Phone {
     width: 300px;
     height: 300px;
-    transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0px);
+    transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) translateY(0px);
   }
-  .overScreen{ display: none !important;}
+  .overScreen {
+    display: none !important;
+  }
 }
 @media screen and (min-width: 768px) {
   .container .Phone {
@@ -208,9 +205,11 @@ main {
     left: 55%;
   }
   .container .viewcontrols {
-    display:flex;
+    display: flex;
   }
-  .overScreen{ display: block;}
+  .overScreen {
+    display: block;
+  }
 }
 @media screen and (min-width: 920px) {
   .container .Phone {
@@ -220,7 +219,8 @@ main {
 .container .Phone .phoneSide {
   position: absolute;
 }
-.container .Phone .PhoneFront, .container .Phone .PhoneBack {
+.container .Phone .PhoneFront,
+.container .Phone .PhoneBack {
   width: 100%;
   height: 100%;
   border-radius: 40px;
@@ -329,7 +329,9 @@ main {
   transform: translateZ(5px);
   border-radius: 40px;
 }
-.container .Phone .PhoneBack .cameraSection .frontside .lens1, .container .Phone .PhoneBack .cameraSection .frontside .lens2, .container .Phone .PhoneBack .cameraSection .frontside .lens3 {
+.container .Phone .PhoneBack .cameraSection .frontside .lens1,
+.container .Phone .PhoneBack .cameraSection .frontside .lens2,
+.container .Phone .PhoneBack .cameraSection .frontside .lens3 {
   width: 78px;
   height: 78px;
   border-radius: 50%;
@@ -339,7 +341,9 @@ main {
   justify-content: center;
   align-items: center;
 }
-.container .Phone .PhoneBack .cameraSection .frontside .lens1 .outer, .container .Phone .PhoneBack .cameraSection .frontside .lens2 .outer, .container .Phone .PhoneBack .cameraSection .frontside .lens3 .outer {
+.container .Phone .PhoneBack .cameraSection .frontside .lens1 .outer,
+.container .Phone .PhoneBack .cameraSection .frontside .lens2 .outer,
+.container .Phone .PhoneBack .cameraSection .frontside .lens3 .outer {
   width: 80%;
   height: 80%;
   border-radius: 50%;
@@ -348,7 +352,9 @@ main {
   justify-content: center;
   align-items: center;
 }
-.container .Phone .PhoneBack .cameraSection .frontside .lens1 .outer .inner, .container .Phone .PhoneBack .cameraSection .frontside .lens2 .outer .inner, .container .Phone .PhoneBack .cameraSection .frontside .lens3 .outer .inner {
+.container .Phone .PhoneBack .cameraSection .frontside .lens1 .outer .inner,
+.container .Phone .PhoneBack .cameraSection .frontside .lens2 .outer .inner,
+.container .Phone .PhoneBack .cameraSection .frontside .lens3 .outer .inner {
   width: 80%;
   height: 80%;
   border-radius: 50%;
@@ -367,12 +373,14 @@ main {
   right: 10px;
   transform: translateY(-50%);
 }
-.container .Phone .PhoneBack .cameraSection .leftside, .container .Phone .PhoneBack .cameraSection .rightside {
+.container .Phone .PhoneBack .cameraSection .leftside,
+.container .Phone .PhoneBack .cameraSection .rightside {
   width: 10px;
   height: 100%;
   display: none;
 }
-.container .Phone .PhoneBack .cameraSection .topside, .container .Phone .PhoneBack .cameraSection .bottomside {
+.container .Phone .PhoneBack .cameraSection .topside,
+.container .Phone .PhoneBack .cameraSection .bottomside {
   width: 100%;
   height: 10px;
   display: none;
@@ -389,15 +397,18 @@ main {
 .container .Phone .PhoneBack .cameraSection .topside {
   transform: rotateX(90deg) translateZ(5px);
 }
-.container .Phone .PhoneTop, .container .Phone .PhoneBottom {
+.container .Phone .PhoneTop,
+.container .Phone .PhoneBottom {
   width: calc(100% - 80px);
   height: 40px;
   background: rgb(70, 70, 70);
 }
-.container .Phone .PhoneTop .leftCorner, .container .Phone .PhoneBottom .leftCorner {
+.container .Phone .PhoneTop .leftCorner,
+.container .Phone .PhoneBottom .leftCorner {
   transform: translateX(50%) rotateY(-90deg) translateX(-40px) translateZ(-80px);
 }
-.container .Phone .PhoneTop .rightCorner, .container .Phone .PhoneBottom .rightCorner {
+.container .Phone .PhoneTop .rightCorner,
+.container .Phone .PhoneBottom .rightCorner {
   transform: translateX(50%) rotateY(0deg) translateX(0px) translateZ(-40px);
 }
 .container .Phone .PhoneTop {
@@ -517,7 +528,8 @@ main {
   bottom: 0;
   transform: translateY(20px) rotateX(-90deg) translate(40px);
 }
-.container .Phone .PhoneRight, .container .Phone .PhoneLeft {
+.container .Phone .PhoneRight,
+.container .Phone .PhoneLeft {
   width: 40px;
   height: calc(100% - 80px);
   background: rgb(70, 70, 70);
@@ -526,19 +538,22 @@ main {
   transform: translateX(-20px) rotateY(-90deg) translateY(40px);
   left: 0;
 }
-.container .Phone .PhoneRight .powerbtn, .container .Phone .PhoneRight .volumbtn {
+.container .Phone .PhoneRight .powerbtn,
+.container .Phone .PhoneRight .volumbtn {
   position: absolute;
   left: 50%;
   width: 20px;
   transform: translateX(-50%) translateZ(5px) rotateX(0deg);
   transition: 0.3s;
 }
-.container .Phone .PhoneRight .powerbtn > div, .container .Phone .PhoneRight .volumbtn > div {
+.container .Phone .PhoneRight .powerbtn > div,
+.container .Phone .PhoneRight .volumbtn > div {
   position: absolute;
   background: rgb(70, 70, 70);
   transform-style: flat;
 }
-.container .Phone .PhoneRight .powerbtn > div label, .container .Phone .PhoneRight .volumbtn > div label {
+.container .Phone .PhoneRight .powerbtn > div label,
+.container .Phone .PhoneRight .volumbtn > div label {
   display: block;
   width: 100%;
   height: 100%;
@@ -546,11 +561,21 @@ main {
   background: rgb(0, 10, 41);
   cursor: pointer;
 }
-.container .Phone .PhoneRight .powerbtn .volumesideRight, .container .Phone .PhoneRight .powerbtn .volumesideLeft, .container .Phone .PhoneRight .powerbtn .volumesideFront, .container .Phone .PhoneRight .volumbtn .volumesideRight, .container .Phone .PhoneRight .volumbtn .volumesideLeft, .container .Phone .PhoneRight .volumbtn .volumesideFront {
+.container .Phone .PhoneRight .powerbtn .volumesideRight,
+.container .Phone .PhoneRight .powerbtn .volumesideLeft,
+.container .Phone .PhoneRight .powerbtn .volumesideFront,
+.container .Phone .PhoneRight .volumbtn .volumesideRight,
+.container .Phone .PhoneRight .volumbtn .volumesideLeft,
+.container .Phone .PhoneRight .volumbtn .volumesideFront {
   display: flex;
   flex-direction: column;
 }
-.container .Phone .PhoneRight .powerbtn .volumesideRight label, .container .Phone .PhoneRight .powerbtn .volumesideLeft label, .container .Phone .PhoneRight .powerbtn .volumesideFront label, .container .Phone .PhoneRight .volumbtn .volumesideRight label, .container .Phone .PhoneRight .volumbtn .volumesideLeft label, .container .Phone .PhoneRight .volumbtn .volumesideFront label {
+.container .Phone .PhoneRight .powerbtn .volumesideRight label,
+.container .Phone .PhoneRight .powerbtn .volumesideLeft label,
+.container .Phone .PhoneRight .powerbtn .volumesideFront label,
+.container .Phone .PhoneRight .volumbtn .volumesideRight label,
+.container .Phone .PhoneRight .volumbtn .volumesideLeft label,
+.container .Phone .PhoneRight .volumbtn .volumesideFront label {
   height: 50%;
 }
 .container .Phone .PhoneRight .powerbtn {
@@ -561,7 +586,8 @@ main {
   width: 100%;
   height: 100%;
 }
-.container .Phone .PhoneRight .powerbtn .powersideRight, .container .Phone .PhoneRight .powerbtn .powersideLeft {
+.container .Phone .PhoneRight .powerbtn .powersideRight,
+.container .Phone .PhoneRight .powerbtn .powersideLeft {
   width: 5px;
   height: 100%;
 }
@@ -571,7 +597,8 @@ main {
 .container .Phone .PhoneRight .powerbtn .powersideLeft {
   transform: rotateY(90deg) translateX(50%) translateZ(-2.5px);
 }
-.container .Phone .PhoneRight .powerbtn .powersideBottom, .container .Phone .PhoneRight .powerbtn .powersideTop {
+.container .Phone .PhoneRight .powerbtn .powersideBottom,
+.container .Phone .PhoneRight .powerbtn .powersideTop {
   width: 20px;
   height: 5px;
 }
@@ -589,7 +616,8 @@ main {
   width: 100%;
   height: 100%;
 }
-.container .Phone .PhoneRight .volumbtn .volumesideRight, .container .Phone .PhoneRight .volumbtn .volumesideLeft {
+.container .Phone .PhoneRight .volumbtn .volumesideRight,
+.container .Phone .PhoneRight .volumbtn .volumesideLeft {
   width: 5px;
   height: 100%;
 }
@@ -599,7 +627,8 @@ main {
 .container .Phone .PhoneRight .volumbtn .volumesideLeft {
   transform: rotateY(90deg) translateX(50%) translateZ(-2.5px);
 }
-.container .Phone .PhoneRight .volumbtn .volumesideBottom, .container .Phone .PhoneRight .volumbtn .volumesideTop {
+.container .Phone .PhoneRight .volumbtn .volumesideBottom,
+.container .Phone .PhoneRight .volumbtn .volumesideTop {
   width: 20px;
   height: 5px;
 }
@@ -615,7 +644,8 @@ main {
 }
 
 #topView:checked ~ main .Phone {
-  transform: translate(-50%, -50%) translateZ(-800px) rotateX(-35deg) rotateY(0deg) rotateZ(0deg) translateY(0px);
+  transform: translate(-50%, -50%) translateZ(-800px) rotateX(-35deg)
+    rotateY(0deg) rotateZ(0deg) translateY(0px);
   transition: 0.6s;
 }
 
@@ -625,37 +655,37 @@ main {
 #behindView:checked ~ main .viewcontrols > label:nth-child(6),
 #frontView:checked ~ main .viewcontrols > label:nth-child(5),
 #bottomView:checked ~ main .viewcontrols > label:nth-child(4) {
-  
-
-  padding-top:32px;
-  padding-bottom:32px;
+  /* padding-top:32px;
+  padding-bottom:32px; */
 }
 
-
-
-
 #rightView:checked ~ main .Phone {
-  transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg) rotateY(-35deg) rotateZ(0deg) translateY(0px);
+  transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg)
+    rotateY(-35deg) rotateZ(0deg) translateY(0px);
   transition: 0.6s;
 }
 
 #bottomView:checked ~ main .Phone {
-  transform: translate(-50%, -50%) translateZ(-800px) rotateX(45deg) rotateY(0deg) rotateZ(0deg) translateY(0px);
+  transform: translate(-50%, -50%) translateZ(-800px) rotateX(45deg)
+    rotateY(0deg) rotateZ(0deg) translateY(0px);
   transition: 0.6s;
 }
 
 #leftView:checked ~ main .Phone {
-  transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg) rotateY(35deg) rotateZ(0deg) translateY(0px);
+  transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg)
+    rotateY(35deg) rotateZ(0deg) translateY(0px);
   transition: 0.6s;
 }
 
 #behindView:checked ~ main .Phone {
-  transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg) rotateY(180deg) rotateZ(0deg) translateY(0px);
+  transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg)
+    rotateY(180deg) rotateZ(0deg) translateY(0px);
   transition: 0.6s;
 }
 
 #frontView:checked ~ main .Phone {
-  transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0px);
+  transform: translate(-50%, -50%) translateZ(-800px) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) translateY(0px);
   transition: 0.6s;
 }
 
@@ -678,7 +708,7 @@ main {
 
 #volumeup:checked ~ main .volind {
   -webkit-animation: popout 4s forwards;
-          animation: popout 4s forwards;
+  animation: popout 4s forwards;
 }
 
 #volumeup:checked ~ main .outervol {
@@ -691,7 +721,7 @@ main {
 
 #volumedown:checked ~ main .volind {
   -webkit-animation: popout2 4s forwards;
-          animation: popout2 4s forwards;
+  animation: popout2 4s forwards;
 }
 
 #volumedown:checked ~ main .outervol {
@@ -1012,7 +1042,7 @@ main {
 
 #Intro_Animation:checked ~ main .viewcontrols {
   -webkit-animation: fadein 2s ease forwards;
-          animation: fadein 2s ease forwards;
+  animation: fadein 2s ease forwards;
 }
 
 @-webkit-keyframes fadein {
@@ -1041,18 +1071,20 @@ main {
 
 @keyframes intro {
   0% {
-    transform: translate(-50%, 10%) translateZ(800px) rotateX(-90deg) rotateY(180deg) rotateZ(0deg) translateY(0px);
-    
+    transform: translate(-50%, 10%) translateZ(800px) rotateX(-90deg)
+      rotateY(180deg) rotateZ(0deg) translateY(0px);
   }
-
-}/*# sourceMappingURL=index.css.map */
-
+} /*# sourceMappingURL=index.css.map */
 
 @keyframes shake {
-  0%  { -webkit-transform:     translate3d(0, 0,0) }
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
 
-  100%{ -webkit-transform:     translate3d(0, 0,50px) }
- }
+  100% {
+    -webkit-transform: translate3d(0, 0, 50px);
+  }
+}
 
 .container .Phone .PhoneFront .screen.overscreen {
   position: absolute;
@@ -1064,13 +1096,11 @@ main {
   transform-origin: 50% 50%;
   /* transform: translate3d(0,0,0); */
   transform: translateZ(50px);
-
 }
 
 .overScreen {
   display: none;
 }
-
 
 .cta {
   position: absolute;
@@ -1079,29 +1109,28 @@ main {
   text-align: center;
 }
 
-.ctaButton{
+.ctaButton {
   display: inline-block;
   background: #613400;
-  color: #FF8800;
+  color: #ff8800;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
-  
-  outline: 7px solid #FF8800;
+
+  outline: 7px solid #ff8800;
   opacity: 0;
   -webkit-animation: fadein 2s ease forwards;
   animation: fadein 2s ease forwards;
 }
 
-
 .ctaButton:hover {
-  background: #FF8800;
+  background: #ff8800;
   color: #613400;
   outline-color: #613400;
 }
 
-.kofi{
+.kofi {
   position: absolute;
   top: 32px;
   right: 32px;
@@ -1109,12 +1138,10 @@ main {
   text-align: right;
 }
 
-
 .installScreen {
-    
   position: absolute;
   left: 0;
-  top:0;
+  top: 0;
 
   display: flex;
   justify-content: center; /* Horizontal Centering */
@@ -1124,8 +1151,6 @@ main {
   background-color: #000;
   transform-style: preserve-3d;
 }
-
-
 
 /* Background data (Original source: https://subtlepatterns.com/grid-me/) */
 /* Animations */
@@ -1175,7 +1200,8 @@ main {
   font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   text-align: center;
   /* img size is 50x50 */
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAANFJREFUaEPtmqENAkEUBf9WgAGFwNIMCY2QIPEYEiSONjCUgkWgwFDBEgQNvGQS7jLn52V3ZuW19XHbr/tzTRazGur3vj+rVVVfHTZ12Z2Geo/6nr9Nl/P+uj0Ge4nfwb3IvyW0iEUgAz4tSGw8a5FYHQRaBBIbz1okVgeBFoHExrMWidVBoEUgsfGsRWJ1EGgRSGw8a5FYHQRaBBIbz1okVgeBFoHExrMWidVBoEUgsfGsRWJ1EGgRSGw8a5FYHQRaBBIbz1okVgeB4ykylv+1Pk7PzaWN6hlWAAAAAElFTkSuQmCC") repeat 0 0;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAANFJREFUaEPtmqENAkEUBf9WgAGFwNIMCY2QIPEYEiSONjCUgkWgwFDBEgQNvGQS7jLn52V3ZuW19XHbr/tzTRazGur3vj+rVVVfHTZ12Z2Geo/6nr9Nl/P+uj0Ge4nfwb3IvyW0iEUgAz4tSGw8a5FYHQRaBBIbz1okVgeBFoHExrMWidVBoEUgsfGsRWJ1EGgRSGw8a5FYHQRaBBIbz1okVgeBFoHExrMWidVBoEUgsfGsRWJ1EGgRSGw8a5FYHQRaBBIbz1okVgeB4ykylv+1Pk7PzaWN6hlWAAAAAElFTkSuQmCC")
+    repeat 0 0;
   -webkit-animation: bg-scrolling-reverse 0.92s infinite;
   /* Safari 4+ */
   -moz-animation: bg-scrolling-reverse 0.92s infinite;
@@ -1191,7 +1217,6 @@ main {
   display: none;
 }
 
-
 .esp-web-install-button {
   width: auto;
   height: auto;
@@ -1202,56 +1227,53 @@ main {
 
   --esp-tools-button-color: #cccccc;
   --esp-tools-button-text-color: #101010;
-  --improv-primary-color: #FF8800;
+  --improv-primary-color: #ff8800;
 }
 
 .postInstallButton,
 esp-web-install-button > button {
   display: inline-block;
   background: #613400;
-  color: #FF8800;
-  padding: 40px 60px !important;;
+  color: #ff8800;
+  padding: 40px 60px !important;
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
   transition: 0.4s;
-  outline: 7px solid #FF8800;
+  outline: 7px solid #ff8800;
   border-radius: 8px !important;
   appearance: none;
   font-size: 32px;
   border: 0px;
   width: auto;
   height: auto;
-
 }
 
-.postInstallButton{
+.postInstallButton {
   display: none;
   font-size: 24px;
 }
 esp-web-install-button > button:hover {
-  background: #FF8800;
+  background: #ff8800;
   color: #613400;
   outline-color: #613400;
 }
 
-
-.smallLogo{
-  display:block;
+.smallLogo {
+  display: block;
 }
 
-.bigLogo{
-  display:none;
-  align-items: end;      
+.bigLogo {
+  display: none;
+  align-items: end;
   pointer-events: none;
 }
 
 @media screen and (min-width: 880px) {
-  .smallLogo{
-    display:none;
+  .smallLogo {
+    display: none;
   }
-  .bigLogo{
-    display:flex;
+  .bigLogo {
+    display: flex;
   }
-  
 }
