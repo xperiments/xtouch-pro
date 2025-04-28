@@ -6,6 +6,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
+import Supporters from "../components/Supporters";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -134,6 +135,7 @@ export default function Home(): JSX.Element {
           </div>
         </div>
       </main>
+      <Supporters />
     </Layout>
   );
 }
